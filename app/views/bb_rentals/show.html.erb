@@ -1,0 +1,15 @@
+<div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+ 
+  <div class="container">
+
+<p style="color: green"><%= notice %></p>
+
+<%= render @bb_rental %>
+
+<div>
+
+    <%= button_to "Eliminar esta Renta", @bb_rental, method: :delete, class: "btn btn-secondary"%>
+
+</div>
+ </div>
+</div>

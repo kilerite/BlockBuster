@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bb_client: one
+  bb_movie: one
+
+two:
+  bb_client: two
+  bb_movie: two

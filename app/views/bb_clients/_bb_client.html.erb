@@ -1,0 +1,21 @@
+<div class="d-flex justify-content-center align-items-center" style="height: 20vh;">
+  <div class="container">
+  
+    <div id="<%= dom_id(bb_client) %>">
+      <p class="text-center">
+        <strong>Avatar:</strong>
+        <img src="<%= bb_client.avatar %>" alt="Avatar" style="width: 50px;">
+      </p>
+
+      <p class="text-center">
+        <strong>Name:</strong>
+        <%= bb_client.name %>
+      </p>
+
+      <p class="text-center">
+        <strong>Email:</strong>
+        <%= bb_client.email %>
+      </p>
+    </div>
+  </div>
+</div>

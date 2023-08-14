@@ -1,0 +1,29 @@
+
+
+
+
+
+<p style="color: green"><%= notice %></p>
+
+<h1 class="text-center">Clientes de Blockbuster</h1>
+
+<%= link_to "Agregar nuevo cliente", new_bb_client_path, class: "btn btn-success float-right mb-3" %>
+
+<div class="d-flex justify-content-center">
+  <div class="row justify-content-center align-items-center no-gutters">
+    <% @bb_clients.each do |bb_client| %>
+      <div class="col-lg-2 px-">
+        <div class="card" style="width: 90%;">
+          <img src="<%= bb_client.avatar %>" class="card-img-top" alt="Avatar">
+          <div class="card-body">
+            <h6 class="card-title">Cliente: <%= bb_client.name %></h6>
+            <p class="card-text">
+              <span class="font-weight-bold">Correo:</span> <%= bb_client.email %>
+            </p>
+            <a href="<%= edit_bb_client_path(bb_client) %>" class="btn btn-primary btn-sm">Editar</a>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

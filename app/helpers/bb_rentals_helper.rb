@@ -1,0 +1,2 @@
+module BbRentalsHelper
+end

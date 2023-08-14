@@ -1,0 +1,26 @@
+<p style="color: green"><%= notice %></p>
+
+<h1 class="text-center">Peliculas de Nuestra Base de Datos</h1>
+
+<%= link_to "Agregar nueva película", new_bb_movie_path, class: "btn btn-success float-right mb-3" %>
+
+<div class="d-flex justify-content-center">
+  <div class="row justify-content-center align-items-center no-gutters">
+    <% @bb_movies.each do |bb_movie| %>
+      <div class="col-lg-2 px-">
+        <div class="card" style="width: 90%;">
+          <% if bb_movie.image.present? %>
+            <img src="<%= bb_movie.image %>" class="card-img-top" alt="Pelicula">
+          <% else %>
+            <!-- Mostrar una imagen alternativa o mensaje si no hay imagen -->
+          <% end %>
+          <div class="card-body">
+            <h6 class="card-title">Pelicula: <%= bb_movie.name %></h6>
+            <!-- Resto del contenido del card-body -->
+            <a href="<%= edit_bb_movie_path(bb_movie) %>" class="btn btn-primary btn-sm">Editar</a>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

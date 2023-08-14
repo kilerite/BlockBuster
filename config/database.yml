@@ -17,8 +17,8 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  username: postgres
-  password: 1018
+  username: <%= Rails.application.credentials.Db[:User] %>
+  password: <%= Rails.application.credentials.Db[:Password] %>
   host: localhost
   port: 5432
 
